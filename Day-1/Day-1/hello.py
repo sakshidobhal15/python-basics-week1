@@ -3,4 +3,4 @@
 # Purpose: First program pushed to GitHub
 
 print("Hello, GitHub!")
-print("I am starting my CSE journey seriously.")
+print("I am starting my CSE journey seriously ")
