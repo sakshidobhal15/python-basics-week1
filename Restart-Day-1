@@ -1,0 +1,29 @@
+# Even Odd Checker with error handling
+
+try:
+    num = int(input("Enter a number: "))
+    
+    if num % 2 == 0:
+        print(num, "is an even number")
+    else:
+        print(num, "is an odd number")
+
+except ValueError:
+    print("Please enter a valid number")
+
+
+
+# Simple Interest with error handling 
+
+try:
+    #taking input from the user 👤 
+    p = int(input(""Enter the principal amount :"))
+    r = int(input("enter the rate amount:"))
+    t = int(input("Enter the time :"))
+
+    Simple_interest=(p*r*t)/100
+
+    print("Simpleinterest is" , Simple_interest)
+
+except ValueError:
+    print("please enter valid number")
