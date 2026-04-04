@@ -1,0 +1,39 @@
+import random
+
+def number_guessing_game():
+    number = random.randint(1, 100)
+    attempts = 0
+    max_attempts = 5
+
+    print("Welcome to the Number Guessing Game!")
+    print("You have 5 attempts to guess the number between 1 and 100.")
+
+    while attempts < max_attempts:
+        try:
+            guess = int(input("Enter your guess: "))
+            attempts += 1
+
+            if guess < number:
+                print("Too low!")
+            elif guess > number:
+                print("Too high!")
+            else:
+                print(f"Congratulations! You guessed it in {attempts} attempts.")
+                return
+
+        except ValueError:
+            print("Please enter a valid number")
+
+        print(f"Attempts left: {max_attempts - attempts}")
+
+    print(f"Sorry! You lost. The correct number was {number}.")
+
+
+# Replay option
+while True:
+    number_guessing_game()
+    choice = input("Do you want to play again? (yes/no): ").lower()
+
+    if choice != "yes":
+        print("Thank you for playing!")
+        break
